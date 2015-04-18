@@ -1,130 +1,21 @@
 <h4 class='text-center'>Categories</h4>
-
-
-        
-          <h4 class='text-center'>Categories</h4>
-          <ul class="list-group">
-            <li class="list-group-item">1</li>
-            <li class="list-group-item">2</li>
-            <li class="list-group-item">3</li>
-            <li class="list-group-item">4</li>
-            <li class="list-group-item">5</li>
-            <li class="list-group-item">6</li>
-            <li class="list-group-item">7</li>
-            <li class="list-group-item">8</li>
-            <li class="list-group-item">9</li>
-            <li class="list-group-item">10</li>
-            <li class="list-group-item">11</li>
-            <li class="list-group-item">12</li>
-            <li class="list-group-item">13</li>
-            <li class="list-group-item">14</li>
-          </ul>
-        
-
-
-
-        <div class="list-groups" id="accordian"><!--category-productsr-->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordian" href="#BelgianAndFrenchOriginAles">
-                      <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                      Belgian And French Origin Ales
-                    </a>
-                  </h4>
-                </div>
-                <div id="sportswear" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <ul>
-                      <li><a href="#">Belgian-Style Flanders Oud Bruin or Oud Red Ales </a></li>
-                      <li><a href="#">Belgian-Style Dubbel </a></li>
-                      <li><a href="#">Belgian-Style Tripel </a></li>
-                      <li><a href="#">Belgian-Style Quadrupel</a></li>
-                      <li><a href="#">Belgian-Style Blonde Ale </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Example of Bootstrap 3 Accordion</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<style type="text/css">
-    .bs-example{
-      margin: 10px;
-    }
-</style>
-</head>
-<body>
-<div class="bs-example">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Beer Type One</a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <ul class="list-group">
-                      <li class="list-group-item">1</li>
-                      <li class="list-group-item">2</li>
-                      <li class="list-group-item">3</li>
-                      <li class="list-group-item">4</li>
-                      <li class="list-group-item">5</li>
-                    </ul>
-                </div>
-            </div>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default" ng-repeat='(key, category) in categories'>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ key+1 }}">{{ category.name }}</a>
+            </h4>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Beer Type Two</a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul class="list-group">
-                      <li class="list-group-item">1</li>
-                      <li class="list-group-item">2</li>
-                      <li class="list-group-item">3</li>
-                      <li class="list-group-item">4</li>
-                      <li class="list-group-item">5</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Beer Type Three</a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul class="list-group">
-                      <li class="list-group-item">1</li>
-                      <li class="list-group-item">2</li>
-                      <li class="list-group-item">3</li>
-                      <li class="list-group-item">4</li>
-                      <li class="list-group-item">5</li>
-                    </ul>
-                </div>
+        <div id="collapse{{ key+1 }}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul class="list-group">
+                  <li class="list-group-item">1</li>
+                  <li class="list-group-item">2</li>
+                  <li class="list-group-item">3</li>
+                  <li class="list-group-item">4</li>
+                  <li class="list-group-item">5</li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-</body>
-</html>                                                                       
-
-<ul class="list-group">
-  <li class="list-group-item" ng-repeat='category in categories'>{{ category.name }}</li>
-</ul>
