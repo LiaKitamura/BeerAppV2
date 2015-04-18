@@ -1,5 +1,5 @@
 angular.module('IHeartBeer')
-  .directive('beerCategory', function(){
+  .directive('beerCategory', ['Category', function(Category){
     return {
       restrict: "E",
       templateUrl: "/assets/templates/directives/beerCategory.html",
@@ -9,6 +9,7 @@ angular.module('IHeartBeer')
           //  regex starts and ends with /
           //  / \/notes ($|/)/ /
         };
+      $scope.categories = Category.query();
       }
     }
-  });
+  }]);
