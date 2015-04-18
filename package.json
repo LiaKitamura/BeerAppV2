@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ryanhightower/BeerAppV2",
   "dependencies": {
     "body-parser": "^1.12.3",
+    "brewerydb-node": "0.0.1",
     "express": "^4.12.3"
   }
 }
