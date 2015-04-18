@@ -9,9 +9,10 @@ app.get('/', function(req, res){
   res.sendfile('index.html', {root: app.settings.views});
 });
 
-// Load routes
-require('./routes/user')(app); //user routes
-require('./routes/beer')(app); // note routes
-require('./routes/category')(app); // category routes
+// API Load routes
+require('./api/user')(app); //user api
+require('./api/beer')(app); // note api
+require('./api/category')(app); // category api
+require('./api/style')(app); // category api
 
 module.exports = app;
