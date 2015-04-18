@@ -11,7 +11,18 @@
     <h1 class="text-center">I Heart Beer</h1>
 
     <!-- categories/styles panel -->
-    <beer-category></beer-category>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <beer-category></beer-category>
+        </div>
+        <div class="col-sm-9">
+          <div ng-view class="container-fluid"></div>
+        </div>
+      </div>
+    </div>
 
   <!-- Scripts -->
 	<!-- Vendor -->
