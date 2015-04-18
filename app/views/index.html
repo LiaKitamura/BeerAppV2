@@ -7,10 +7,36 @@
   </head>
   <body>
     <beer-main-nav></beer-main-nav>
-    
-    <h1>Beer</h1>
 
-    <div ng-view class="container-fluid"></div>
+    <h1 class="text-center">I Heart Beer</h1>
+
+    <!-- categories/styles panel -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <h4 class='text-center'>Categories</h4>
+          <ul class="list-group">
+            <li class="list-group-item">1</li>
+            <li class="list-group-item">2</li>
+            <li class="list-group-item">3</li>
+            <li class="list-group-item">4</li>
+            <li class="list-group-item">5</li>
+            <li class="list-group-item">6</li>
+            <li class="list-group-item">7</li>
+            <li class="list-group-item">8</li>
+            <li class="list-group-item">9</li>
+            <li class="list-group-item">10</li>
+            <li class="list-group-item">11</li>
+            <li class="list-group-item">12</li>
+            <li class="list-group-item">13</li>
+            <li class="list-group-item">14</li>
+          </ul>
+        </div>
+        <div class="col-sm-9">
+          <div ng-view class="container-fluid"></div>
+        </div>
+      </div>
+    </div>
 
   <!-- Scripts -->
 	<!-- Vendor -->
@@ -31,10 +57,10 @@
   <script src="/assets/js/controllers/beersIndexController.js"></script>
 
   <!-- Directives -->
-
   <script src="/assets/js/directives/beerMainNav.js"></script>
-	<!-- Services -->
 
+	<!-- Services -->
+  <script src="/assets/js/services/beer.js"></script>
 
   </body>
 </html>
