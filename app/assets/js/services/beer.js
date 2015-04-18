@@ -1,7 +1,7 @@
 angular.module('IHeartBeer')
   // .factory('Note', ['$http', function NoteFactory($http){
   .factory('Beer', ['$resource',
-    function IHeartBeerFactory($resource){
+    function BeerFactory($resource){
       return $resource('/beers/:id', { id: "@id" }, {
         update: {
           method: "PUT"
