@@ -5,6 +5,7 @@ var server = express();
 require('./server/expressConfig')(server, express);
 require('./server/api/beer')(server);
 require('./server/api/category')(server);
+require('./server/api/style')(server);
 
 server.get('/', function(req, res){
   res.sendFile('index.html', {root: server.settings.views});
