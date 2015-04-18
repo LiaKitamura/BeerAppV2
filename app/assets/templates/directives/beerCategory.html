@@ -9,7 +9,7 @@
         <div id="collapse{{ key+1 }}" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class="list-group">
-                  <li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id }">{{ style.name }}</li>
+                  <a href="#/style.id"><li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id }">{{ style.name }}</li></a>
                 </ul>
             </div>
         </div>
