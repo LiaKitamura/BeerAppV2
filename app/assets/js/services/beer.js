@@ -2,7 +2,7 @@ angular.module('IHeartBeer')
   // .factory('Note', ['$http', function NoteFactory($http){
   .factory('Beer', ['$resource',
     function BeerFactory($resource){
-      return $resource('/beers/:id', { id: "@id" }, {
+      return $resource('/beer/style/:styleId/:page', { styleId: "@styleId", page: "@page", }, {
         update: {
           method: "PUT"
         }
