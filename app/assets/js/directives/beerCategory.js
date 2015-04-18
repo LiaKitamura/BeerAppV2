@@ -1,5 +1,5 @@
 angular.module('IHeartBeer')
-  .directive('beerCategory', ['Category', function(Category){
+  .directive('beerCategory', ['Category', 'Style', function(Category, Style){
     return {
       restrict: "E",
       templateUrl: "/assets/templates/directives/beerCategory.html",
@@ -10,6 +10,7 @@ angular.module('IHeartBeer')
           //  / \/notes ($|/)/ /
         };
       $scope.categories = Category.query();
+      $scope.styles = Style.query();
       }
     }
   }]);
