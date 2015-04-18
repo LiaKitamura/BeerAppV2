@@ -1,11 +1,18 @@
 var express = require('express');
-var app = express();
+var server = express();
 
-app.get('/', function(request, response){
-  // response.sendFile(__dirname + '/app/views/index.html');
-  app.use(express.static('views'));
+// configure server (assets folder, middleware, etc.)
+require('./server/expressConfig')(server, express);
+require('./server/api/beer')(server);
+
+server.get('/', function(req, res){
+  res.sendFile('index.html', {root: server.settings.views});
 });
 
-app.listen(3000, function(){
-  console.log('Listening on port 3000');
-});
+// load api endpoints
+// require('./server/api.js')(server);
+
+server
+	.listen(3000, function(){
+		console.log('Server running on 3000. Bottoms up...');
+	});

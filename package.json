@@ -1,0 +1,24 @@
+{
+  "name": "BeerAppV2",
+  "version": "1.0.0",
+  "description": "A place to mark and share your favorite beers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanhightower/BeerAppV2.git"
+  },
+  "author": "Lia Kitamura, Marc Price, Greg Francom, Ryan Hightower",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanhightower/BeerAppV2/issues"
+  },
+  "homepage": "https://github.com/ryanhightower/BeerAppV2",
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "express": "^4.12.3"
+  }
+}
