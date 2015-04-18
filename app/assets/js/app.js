@@ -5,7 +5,7 @@
       $routeProvider
         .when('/beers', {
           templateUrl: '/assets/templates/pages/beers/index.html',
-          controller: 'BeersIndexController'
+          controller: 'BeersIndexController',
         })
     });
 
