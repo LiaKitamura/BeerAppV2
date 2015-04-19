@@ -3,13 +3,15 @@
   angular.module('IHeartBeer', ['ngRoute', 'ngResource'])
     .config(function($routeProvider){
       $routeProvider
-        .when('/beer/:styleId/:page', {
-          templateUrl: '/assets/templates/pages/beers/index.html',
-          controller: 'BeersIndexController',
+       
+        .when('/style/:styleId/:page', {
+          templateUrl: '/assets/templates/pages/style.html',
+          controller: 'StyleIndexController',
         })
-        .when('/beer/:styleId/', {
-          templateUrl: '/assets/templates/pages/beers/index.html',
-          controller: 'BeersIndexController',
+        
+        .when('/style/:styleId/', {
+          templateUrl: '/assets/templates/pages/style.html',
+          controller: 'StyleIndexController',
         })
       
     });
