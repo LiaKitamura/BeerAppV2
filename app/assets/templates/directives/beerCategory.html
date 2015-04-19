@@ -3,13 +3,17 @@
     <div class="panel panel-default" ng-repeat='(key, category) in categories'>
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ key+1 }}">{{ category.name }}</a>
+                <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ key+1 }}" href="">{{ category.name }}</a>
             </h4>
         </div>
         <div id="collapse{{ key+1 }}" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class="list-group">
-                  <li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id }">{{ style.name }}</li>
+                  <li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id }">
+                    <a ng-href="/#/style/{{style.id}}">
+                    {{ style.name }}
+                    </a>
+                  </li>
                 </ul>
             </div>
         </div>
