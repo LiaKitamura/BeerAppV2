@@ -1,2 +1,7 @@
-<h4>Beers</h4>
-{{ beer }}
+<h4>{{ beer.name}}</h4>
+<p>{{ beer.description}}</p>
+<p>ABV: {{ beer.abv}}</p>
+<p>IBU: {{ beer.ibu}}</p>
+<p>Organic: {{ beer.isOrganic }}</p>
+<p><img src="{{ beer.labels.medium }}" alt="" /></p>
+<!-- {{ beer }} -->
