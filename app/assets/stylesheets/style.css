@@ -1,3 +1,18 @@
+.navbar-default {
+  background-color: #E9C072;
+  border-color: #FFDB96;
+}
+.navbar-brand a {
+  color: #2D5D9C;
+}
+.panel-default .panel-heading {
+  color: #FFDB96;
+  background-color: #2D5D9C;
+  border-color: #72A5E9;
+}
+.list-group-item {
+  border: 1px solid #72A5E9;
+}
 /*
 
 
