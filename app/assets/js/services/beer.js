@@ -1,12 +1,15 @@
 angular.module('IHeartBeer')
   // .factory('Note', ['$http', function NoteFactory($http){
-  .factory('Beer', ['$resource',
-    function BeerFactory($resource){
-      return $resource('/beer/style/:styleId/:page', { styleId: "@styleId", page: "@page", }, {
-        update: {
-          method: "PUT"
+  .factory('Beer', ['$http',
+    function BeerFactory($http){
+      return {
+        query: function(styleId, page){ // Note.all
+          return $http.get("/beer/style/"+styleId+"/"+page);
+        },
+        get: function(id){ // Note.get(note.id)
+          return $http.get("/beer/"+id);
         }
-      });
+      }
 
       // $resource encapsulates ALL of these methods
       // {
