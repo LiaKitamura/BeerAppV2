@@ -1,10 +1,19 @@
-<h4>{{style.name}}</h4>
-<!-- {{ 	beers }} -->
-<ul class="list-group">
+<!-- style description collapse -->
+<a data-toggle="collapse" data-target="#collapseStyle" href="">
+  <h4>{{ style.name }}</h4>
+</a>
+<div id="collapseStyle" class="panel-collapse collapse">
+  {{ style.description }}
+</div>
 
-  <li class="list-group-item" ng-repeat="beer in beers">
+<!-- {{ 	beers }} -->
+<ul class="list-group row">
+
+  <li class="list-group-item col-sm-4 text-center" ng-repeat="beer in beers">
     <a ng-href="/#/beer/{{ beer.id}}">
-    {{ beer.name }}
+      <img src="{{ beer.labels.icon }}" alt="" />
+      <img ng-show="!beer.labels.icon" src="/assets/images/notAvailable.png" alt="" /><br>
+      {{ beer.name }}
     </a>
   </li>
 
