@@ -13,6 +13,17 @@
 .list-group-item {
   border: 1px solid #72A5E9;
 }
+
+.logo img {
+  max-width: 80px;
+}
+
+.logo h1 {
+  display: inline-block;
+  font-family: 'Cabin Sketch', cursive;
+  text-decoration: underline;
+  font-size: 45px;
+}
 /*
 
 
