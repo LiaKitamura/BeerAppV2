@@ -1,13 +1,13 @@
 <!-- style description collapse -->
 <a data-toggle="collapse" data-target="#collapseStyle" href="">
-  <h4>{{ style.name }}</h4>
+  <h4 id="styleName" data-toggle="tooltip" data-placement="top" title="Click here for style description">{{ style.name }}</h4>
 </a>
 <div id="collapseStyle" class="panel-collapse collapse">
   {{ style.description }}
 </div>
 
 <!-- {{ 	beers }} -->
-<ul class="list-group row">
+<ul class="list-group row beers">
 
   <li class="list-group-item col-sm-4 text-center" ng-repeat="beer in beers">
     <a ng-href="/#/beer/{{ beer.id}}">
@@ -18,3 +18,10 @@
   </li>
 
 </ul>
+
+<!-- not sure where I need to put this. in the app.js? -->
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
