@@ -1,7 +1,33 @@
-<h4>{{ beer.name}}</h4>
-<p>{{ beer.description}}</p>
-<p>ABV: {{ beer.abv}}</p>
-<p>IBU: {{ beer.ibu}}</p>
-<p>Organic: {{ beer.isOrganic }}</p>
-<p><img src="{{ beer.labels.medium }}" alt="" /></p>
+<div class="container-fluid beer-container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-3">
+        <img class="img-responsive beer-label" src="{{ beer.labels.medium }}" alt="" />
+        <img class="img-responsive beer-label" ng-show="!beer.labels.medium" src="/assets/images/notAvailableLarge.png" alt="" />
+      </div>
+      <div class="col-sm-8">
+        <h3 class="beer-name"><u>{{ beer.name}}</u></h3>
+        <p ng-hide="!beer.abv" class="col-sm-3"><b>ABV:</b> {{ beer.abv }}</p>
+        <p ng-show="!beer.abv" class="col-sm-3"><b>ABV:</b> N/A</p>
+        <p ng-hide="!beer.ibu" class="col-sm-3"><b>IBU:</b> {{ beer.ibu }}</p>
+        <p ng-show="!beer.ibu" class="col-sm-3"><b>IBU:</b> N/A</p>
+        <p ng-hide="!beer.isOrganic" class="col-sm-3"><b>Organic:</b> {{ beer.isOrganic }}</p>
+        <p ng-show="!beer.isOrganic" class="col-sm-3"><b>Organic:</b> N/A</p>
+        <p ng-hide="!beer.servingTemperatureDisplay" class="col-sm-3"><b>Serving Temperature Display:</b> {{ beer.servingTemperatureDisplay }}</p>
+        <p ng-show="!beer.servingTemperatureDisplay" class="col-sm-3"><b>Serving Temperature Display:</b> N/A</p>
+        <p ng-hide="!beer.originalGravity" class="col-sm-3"><b>Original Gravity:</b> {{ beer.originalGravity }}</p>
+        <p ng-show="!beer.originalGravity" class="col-sm-3"><b>Original Gravity:</b> N/A</p>
+        <p ng-hide="!beer.glass.name" class="col-sm-3"><b>Serving Glass:</b> {{ beer.glass.name }}</p>
+        <p ng-show="!beer.glass.name" class="col-sm-3"><b>Serving Glass:</b> N/A</p>
+        <p ng-hide="!beer.available.name" class="col-sm-3"><b>Availability:</b> {{ beer.available.description }}</p>
+        <p ng-show="!beer.available.name" class="col-sm-3"><b>Availability:</b> N/A</p>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <p ng-hide="!beer.description" class="beer-description" >{{ beer.description}}</p>
+      <p ng-show="!beer.description" class="beer-description">{{ beer.name }} beer description unavailable</p>
+    </div>
+  </div>
+</div>
+
 <!-- {{ beer }} -->

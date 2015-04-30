@@ -15,7 +15,7 @@
 }
 
 .logo img {
-  max-width: 80px;
+  max-width: 105px;
 }
 
 .logo h1 {
@@ -35,6 +35,21 @@
   display: inline-block;
 }
 
+.beer-container {
+  margin-top: 3.9%;
+}
+
+.beer-label {
+  border: 1px solid black;
+}
+
+.beer-name {
+  margin-top: 0;
+}
+
+.beer-description {
+  margin-top: 40px;
+}
 
 /*
 
