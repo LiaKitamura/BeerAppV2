@@ -9,7 +9,7 @@
 <!-- {{ 	beers }} -->
 <ul class="list-group row beers">
 
-  <li class="list-group-item col-sm-4 text-center" ng-repeat="beer in beers">
+  <li class="list-group-item col-sm-4 text-center" ng-repeat="beer in beers | filter:query">
     <a ng-href="/#/beer/{{ beer.id}}">
       <img src="{{ beer.labels.icon }}" alt="" />
       <img ng-show="!beer.labels.icon" src="/assets/images/notAvailable.png" alt="" /><br>

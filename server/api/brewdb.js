@@ -1,4 +1,4 @@
 var BreweryDb = require('brewerydb-node');
-var brewdb = new BreweryDb('d1bdc16f03f1d1e80f714d8af71e9e30');
+var brewdb = new BreweryDb('0c77a68971da615fc90af89910f507ec');
 
 module.exports = brewdb;
