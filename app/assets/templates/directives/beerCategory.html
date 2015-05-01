@@ -1,6 +1,6 @@
 <h4 class='text-center'>Categories</h4>
 <div class="panel-group category-list" id="accordion">
-    <div class="panel panel-default" ng-repeat='(key, category) in categories'>
+    <div class="panel panel-default" ng-repeat='(key, category) in categories | filter:query'>
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ key+1 }}" href="">{{ category.name }}</a>
