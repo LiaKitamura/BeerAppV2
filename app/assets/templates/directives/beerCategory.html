@@ -10,7 +10,7 @@
             <div class="panel-body">
                 <ul class="list-group">
 
-                  <li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id } | filter:query">
+                  <li class="list-group-item" ng-repeat="style in styles | filter: { categoryId: category.id }">
                     <a ng-href="/#/style/{{style.id}}">
                       {{ style.name }}
                     </a>
